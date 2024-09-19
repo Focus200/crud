@@ -12,4 +12,7 @@ Route::post('/students', [StudentController::class, 'store'])->name('students.st
 Route::get('/search', [StudentController::class, 'searchForm'])->name('student.searchForm');
 Route::get('/student/search', [StudentController::class, 'search'])->name('student.search');
 
+Route::get('/student/find', [StudentController::class, 'showFindForm'])->name('student.find');
+Route::post('/student/edit', [StudentController::class, 'showEditForm'])->name('student.edit');
+Route::post('/student/update/{studentid}', [StudentController::class, 'update'])->name('student.update');
 
